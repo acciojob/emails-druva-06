@@ -34,12 +34,14 @@ public class Email {
         // 4. It contains at least one digit
         // 5. It contains at least one special character. Any character apart from alphabets and digits is a special character
         if(oldPassword.equals(password)){
-            if(newPassword.length() < 8) return;
+            if(newPassword.length() < 8)return;
             if(!newPassword.matches(".*[A-Z].*")) return;
             if(!newPassword.matches(".*[a-z].*")) return;
             if(!newPassword.matches(".*[0-9].*")) return;
             if(!newPassword.matches(".*[!@#&()–[{}]:;',?/*~$^+=<>].*")) return;
             password = newPassword;
+            System.out.println("Password changed successfully!");
         }
+        System.out.println("The given password does not match current password!");
     }
 }
