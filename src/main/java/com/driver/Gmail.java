@@ -61,7 +61,7 @@ public class Gmail extends Email {
         //It is guaranteed that start date <= end date
         int noOfMails = 0;
         for(int i=0;i<inbox.size();i++){
-            if(inbox.get(i).getLeft().compareTo(start) > 0 && inbox.get(i).getLeft().compareTo(end) < 0){
+            if(inbox.get(i).getLeft().compareTo(start) >= 0 && inbox.get(i).getLeft().compareTo(end) <= 0){
                 noOfMails++;
             }
         }
